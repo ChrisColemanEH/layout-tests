@@ -1,0 +1,62 @@
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: auto auto;
+  background-color: white;
+}
+
+.App > header {
+  box-shadow: 0px 8px 24px 0px #000;
+  grid-column: 1;
+  grid-row: 1 / 1;
+  z-index: 10;
+}
+
+.App > main {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  grid-row: 2/2;
+
+  display: grid;
+  grid-template-columns: 390px auto;
+}
+
+.App > main > .left-container {
+  grid-column: 1 / 1;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #f3f3f3;
+}
+
+.App > main > .right-container {
+  grid-column: 2 / 2;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #fafafa;
+}
+
+/** 
+  Inconsequential to layout.
+*/
+
+.App > header img {
+  height: 2.5rem;
+}
+
+.App > main > .left-container > .left-content-pad {
+  padding: 1rem;
+}
+
+.App > main > .right-container > .right-content-pad {
+  padding: 1rem;
+}
