@@ -1,12 +1,26 @@
-import React from "react";
+import React, { ChangeEventHandler, useEffect, useState } from "react";
 import logo from "./logo.svg";
-import "./App.css";
+import "./app.css";
 
 function App() {
+  const [theme, setTheme] = useState("light");
+  const [useDark, setUseDark] = useState(false);
+
+  useEffect(() => {
+    if (useDark) setTheme("dark");
+    else setTheme("light");
+  }, [useDark]);
+
+  function switchTheme(e: any) {
+    if (useDark) setUseDark(false);
+    else setUseDark(true);
+  }
+
   return (
-    <div className="App">
+    <div className="App" data-theme={theme}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <input type="checkbox" onChange={switchTheme} checked={useDark} />
       </header>
       <main className="">
         <div className="left-container">

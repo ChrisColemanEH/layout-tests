@@ -1,3 +1,5 @@
+@import "./app.theme.css";
+
 #root {
   height: 100%;
   width: 100%;
@@ -9,14 +11,22 @@
   display: grid;
   overflow: hidden;
   grid-template-rows: auto auto;
-  background-color: white;
+  background-color: var(--app-surface);
+  color: var(--font-color-normal);
 }
 
 .App > header {
-  box-shadow: 0px 8px 24px 0px #000;
+  box-shadow: 0px 8px 24px 0px var(--font-color-normal);
   grid-column: 1;
   grid-row: 1 / 1;
   z-index: 10;
+  background-color: var(--primary-surface);
+  color: var(--font-color-normal);
+}
+
+.App[data-theme="dark"] > header {
+  box-shadow: none;
+  border-bottom: solid 1px var(--font-color-disabled);
 }
 
 .App > main {
@@ -34,7 +44,8 @@
   width: auto;
   height: auto;
   overflow-y: scroll;
-  background-color: #f3f3f3;
+  background-color: var(--primary-surface);
+  color: var(--font-color-normal);
 }
 
 .App > main > .right-container {
@@ -42,7 +53,8 @@
   width: auto;
   height: auto;
   overflow-y: scroll;
-  background-color: #fafafa;
+  background-color: var(--primary-surface);
+  color: var(--font-color-normal);
 }
 
 /** 

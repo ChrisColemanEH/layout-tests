@@ -1,0 +1,15 @@
+:root {
+  --app-surface: #ffffff;
+  --primary-surface: #fafafa;
+  --font-color-normal: #333;
+  --font-color-emphasis: #000;
+  --font-color-disabled: #666;
+}
+
+[data-theme="dark"] {
+  --app-surface: #000;
+  --primary-surface: #333;
+  --font-color-normal: #fafafa;
+  --font-color-emphasis: #fff;
+  --font-color-disabled: #ccc;
+}
